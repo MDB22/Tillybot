@@ -5,8 +5,11 @@ import json
 import requests
 from flask import Flask, request
 
+from tillybot import Tillybot
+
 app = Flask(__name__)
 
+bot = Tillybot()
 
 @app.route('/', methods=['GET'])
 def verify():
@@ -39,7 +42,14 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    send_message(sender_id, "Actually, I have to disagree...")
+                    if bot.has_keywords(message_text):
+
+                        response = bot.respond(message_text)
+
+                    else:
+                        response = bot.itillianise(message_text)
+
+                    send_message(sender_id, response)
 
                 if messaging_event.get("delivery"):  # delivery confirmation
                     pass
