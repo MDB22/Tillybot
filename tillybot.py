@@ -12,7 +12,7 @@ class Tillybot():
 		self.keywords = []
 
 	def itillianise(self, message_text):
-		return text
+		return message_text
 
 	def has_keywords(self, message_text):
 
