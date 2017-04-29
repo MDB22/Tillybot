@@ -4,7 +4,7 @@ class Tillybot():
 		self.responses = {
 			"alien": "Aliens don't look like that!",
 			"automatic": "I love manuals. If I drive an automatic I just can't *feel* the car...",
-			"spelling": "I don't care if you don't spell it that way, language is fluid.",
+			"spell": "I don't care if you don't spell it that way, language is fluid.",
 			"regardless": "I believe the correct word is 'irregardless'...",
 			"pineapple": "Get that shit off my pizza."
 		}
