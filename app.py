@@ -42,7 +42,7 @@ def webhook():
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
 
-                    if bot.has_keywords(message_text):
+                    if bot.has_keywords(message_text.lower()):
 
                         response = bot.respond(message_text)
 

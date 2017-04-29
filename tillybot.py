@@ -8,8 +8,8 @@ class Tillybot():
 		self.vocabulary = vocabulary.split()
 		self.responses = {
 			"alien": "Aliens don't look like that!",
-			"automatic": "If I drive an automaitc I just can't *feel* the car...",
-			"spelling": "I don't care if you don't spell it that way, language is fluid.",
+			"automatic": "I love manuals. If I drive an automatic I just can't *feel* the car...",
+			"spell": "I don't care if you don't spell it that way, language is fluid.",
 			"regardless": "I believe the correct word is 'irregardless'...",
 			"pineapple": "Get that shit off my pizza."
 		}
