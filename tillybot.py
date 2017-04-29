@@ -1,13 +1,30 @@
 class Tillybot():
 
 	def __init__(self):
-		pass
+		self.responses = {
+			"alien": "Aliens don't look like that!",
+			"automatic": "If I drive an automaitc I just can't *feel* the car...",
+			"spelling": "I don't care if you don't spell it that way, language is fluid.",
+			"regardless": "I believe the correct word is 'irregardless'...",
+			"pineapple": "Get that shit off my pizza."
+		}
+
+		self.keywords = []
 
 	def itillianise(self, message_text):
 		return text
 
 	def has_keywords(self, message_text):
-		pass
+
+		keywords = []
+
+		for keyword in self.responses:
+			if keyword in message_text:
+				keywords.append(keyword)
+
+		self.keywords = keywords
+
+		return True if keywords else False
 
 	def respond(self, message_text):
-		pass
+		return self.responses[self.keywords[0]]
