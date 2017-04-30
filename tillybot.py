@@ -1,7 +1,7 @@
 import re
 import json
 
-PREBUILT_RESPONSES = "responses.txt"
+PREBUILT_RESPONSES = "resources/responses.txt"
 
 class Tillybot():
 
